@@ -1,0 +1,71 @@
+BitBucket is similar to GitHub
+senmar13/Sentmari07$
+https://github.com/senmar13/git.git
+Press Ctrl+Shift+P to access all VS commands
+Open chat anytime with Ctrl+Alt+I
+Ctrl+K Ctrl+T for theme settings (Dark mode/light mode)
+
+git --version   ------ to know the git version
+git config --global user.name 'senmar13@gmail.com' --> to config the user name
+git config --global user.email 'senmar13@gmail.com' --> to config the user email
+git config user.name --> to view the user name
+git config user.email --> to view the user email
+clear --> to clear the display console
+git config --global init.defaultbranch main  --> config the default branch is main at initial time
+git init --> intializing the empty git repository in D:/Git/.git/
+Create files (like readme.md, index.html, index.js)
+git status --> will display the untracked files created which is yet to add and commit in the main branch
+git add readme.md --> to add the file in the repository for track
+git commit -m 'readme' --> commiting the file for tracking
+	[main (root-commit) e18b73a] readme --> e18b73a is commit id starts with(a hash value)
+	1 file changed, 2 insertions(+)
+	create mode 100644 readme.md
+git log --> to view th details about when changes happened in the repository
+git add . --> instead of each file add just mention . to add all files in main branch
+git checkout e18b73a25b95e0c7a3b14dc8335b6f09954bba0b --> will go the version which is having the commit id
+git checkout main --> again come back to current commit id which is points to main
+git checkout -f main --> force to main checkout that recent changes without commit will be discarded.Only commited changes should be availble in main.
+Ctrl+Shift+c  --> copy the content from terminal
+right click --> paste
+git remote add origin https://github.com/senmar13/git.git --> add the local git repository files to remote repository using the remote link
+git branch -M main
+git push --set-upstream origin main
+git push -u origin main
+git branch bug --> create a new branch with name 'bug' from current active branch
+git checkout bug -->checkout the bug branch and switch to bug branch
+git checkout -b feature --> instead of create and checkout a branch in two different steps, will do in single steps using this command
+git branch new-bug bug --> i am in feature branch but i want to create a new branch 'new-bug' from bug branch
+git push --set-upstream origin new-bug
+git push -u origin feature --> Required only on first time for this branch
+git push --> from next time just use this command to push the files to remote repository
+- After push, we can do merge request from feature to main branch and delete the feature branch if not needed
+git pull --> after select the main branch now, pull the merged code from remote main branch to local main branch
+git fetch --> will fetch all the codes/branches from remote repository to local
+git checkout new-feature --> branch 'new-feature' set up to track 'origin/new-feature' in local and Switched to a new branch 'new-feature'
+Objective - new-bug changes has to be merged with main branch
+shows conflicts
+git checkout new-bug --> switch to new-bug branch
+git merge main --> request for merge of main with new-bug
+resolve conflicts
+new-bug -> main merge
+Resolve the conflicts
+# Rename the current branch
+git branch -m new-branch-name
+
+# If renaming another branch
+git branch -m old-branch-name new-branch-name
+
+# Push the new branch and reset upstream
+git push origin -u new-branch-name
+
+# Delete the old branch from remote
+git push origin --delete old-branch-name
+
+# Move to previous commit id changes and discard the changes after that commit id
+git reset commit id
+
+unstaged - file got modified
+staged - file changes accepted like git add filename
+saved - file changes saved like git commit -m 'message'
+
+
