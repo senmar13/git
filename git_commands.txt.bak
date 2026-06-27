@@ -61,21 +61,11 @@ git push origin -u new-branch-name
 # Delete the old branch from remote
 git push origin --delete old-branch-name
 
-# Move to previous commit id changes and discard the commit history in log
-git reset commit id --> will reset to unstaged file
-git reset --soft commit id --> will reset to staged file that means no need to execute git add filename(note content will not be deleted) and can do one more commit.
-git reset --hard commit id --> will reset to staged file that means no need to execute git add filename(note content also will be deleted) and can do one more commit.
-
-# Move to previous commit id changes and maintain the commit history in log
-git revert commit id --> 
+# Move to previous commit id changes and discard the changes after that commit id
+git reset commit id
 
 unstaged - file got modified
 staged - file changes accepted like git add filename
 saved - file changes saved like git commit -m 'message'
-
-git stash --> will hold/save the changes which is not commited due to incomplete task for future pickup and go to last commited changes.
-whenever we done our other tasks and again want to do the stash work use the below command
-git stash list --> will list the tasks in stash
-git stash apply 'stash@{0}' --> apply the stash which you want in the stash list
 
 
