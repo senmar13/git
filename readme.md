@@ -6,3 +6,5 @@ This is a complete Git Course
 # This is from bug branchwq
 # commit 1
 # commit 2
+# commit 3
+# commit 4
